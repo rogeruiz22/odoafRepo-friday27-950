@@ -1,14 +1,11 @@
-name: ‘Hola Mundo’
-description: ‘Greet someone’
+name: "Hola Mundo"
+description: "Greet someone"
 inputs:
   who-to-greet:  # id of input
-    description: ‘Who to greet’
+    description: "Who to greet"
     required: true
-    default: ‘World’
+    default: "World"
 outputs:
-  random-number:
-    description: “Random number”
-    value: ${{ steps.prueba.outputs.output-variable }}
   output-variable:
     description: "wahteva"
     value: ${{ steps.prueba.outputs.output-variable }}
