@@ -10,7 +10,7 @@ outputs:
     description: “Random number”
     value: ${{ steps.random-number-generator.outputs.random-number }}
 runs:
-  using: “composite”
+  using: 'composite'
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
