@@ -3,14 +3,19 @@ description: "Greet someone"
 inputs:
   who-to-greet:  # id of input
     description: "Who to greet"
-    required: true
+    required: false
     default: "World"
+    
+  another-input:
+    description: "lo que sea"
+    required: true
 outputs:
   output-variable:
     description: "wahteva"
     value: ${{ steps.prueba.outputs.output-variable }}
 runs:
   using: “composite”
+  
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
@@ -18,5 +23,5 @@ runs:
     - id: prueba
       run: |
         echo "::set-output name=output-variable::"
-        mvn test
+        echo ${{ inputs.another-input }}
       shell: bash
