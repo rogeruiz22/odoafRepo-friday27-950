@@ -30,3 +30,4 @@ runs:
       shell: bash
       
     - run: mvn test
+      shell: bash
