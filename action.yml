@@ -10,7 +10,7 @@ inputs:
     description: "lo que sea"
     required: true
 outputs:
-  output-variable:
+  hovno:
     description: "wahteva"
     value: ${{ steps.prueba.outputs.hovno }}
 runs:
@@ -21,10 +21,7 @@ runs:
       shell: bash
       
     - id: prueba
-      run: echo "::set-output name=output-variable::"
-      shell: bash
-      
-    - run: echo "::setup-output name=hovno::"
+      run: echo "::set-output name=hovno::"
       shell: bash
       
     - run: echo ${{ inputs.comando }}
