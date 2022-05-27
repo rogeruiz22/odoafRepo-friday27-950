@@ -9,19 +9,11 @@ inputs:
   comando:
     description: "lo que sea"
     required: true
-outputs:
-  hovno:
-    description: "wahteva"
-    value: ${{ steps.prueba.outputs.hovno }}
 runs:
   using: “composite”
   
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }}
-      shell: bash
-      
-    - id: prueba
-      run: echo "::set-output name=hovno::"
       shell: bash
       
     - run: echo ${{ inputs.comando }}
