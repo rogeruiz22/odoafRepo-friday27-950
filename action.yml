@@ -12,6 +12,4 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    
     - run: mvn test
-      shell: bash
