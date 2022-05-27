@@ -63,6 +63,8 @@ public class AppTest {
         sendButton.click();
 
         Thread.sleep(2000);
+        
+        Assert.assertEquals(true);
 
         driver.quit();
     }
