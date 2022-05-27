@@ -16,8 +16,7 @@ runs:
       shell: bash
       
     - id: prueba
-      run: echo "::set-output name=output-variable::"
-      shell: bash
-      
-    - run: mvn test
+      run: |
+        echo "::set-output name=output-variable::"
+        mvn test
       shell: bash
