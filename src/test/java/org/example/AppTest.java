@@ -22,9 +22,9 @@ public class AppTest {
 
         Thread.sleep(8000);
 
-//        WebElement selectAllContactsCheckbox = driver.findElement(By.xpath("(//span[@class='slds-checkbox--faux'])[1]"));
-        WebElement selectRogerContact = driver.findElement(By.xpath("(//a[text()='Roger Ruiz']/ancestor::tr//td/following-sibling::td[@class='slds-cell-edit cellContainer'])[1]"));
-        selectRogerContact.click();
+        WebElement selectAllContactsCheckbox = driver.findElement(By.xpath("(//span[@class='slds-checkbox--faux'])[1]"));
+//        WebElement selectRogerContact = driver.findElement(By.xpath("(//a[text()='Roger Ruiz']/ancestor::tr//td/following-sibling::td[@class='slds-cell-edit cellContainer'])[1]"));
+        selectAllContactsCheckbox.click();
 
         WebElement sendListEmailButton = driver.findElement(By.xpath("//div[contains(text(), 'Send List Email')]"));
         sendListEmailButton.click();
@@ -32,7 +32,7 @@ public class AppTest {
         Thread.sleep(4000);
 
         WebElement subjectField = driver.findElement(By.xpath("//input[@placeholder='Enter Subject...']"));
-        subjectField.sendKeys("Incubator Team - Github Actions funciona !!! :)");
+        subjectField.sendKeys("Incubator Team - Composite Github Actions working !!! :)");
 
         Thread.sleep(3000);
 
@@ -47,9 +47,12 @@ public class AppTest {
         Thread.sleep(1000);
 
         WebElement emailBodyTextArea = driver.findElement(By.cssSelector("body"));
-        emailBodyTextArea.sendKeys("Este email fue enviado automaticamente usando workflows en " +
-                                           "Github Actions con Selenium test. Se ejecuto y se ejecutara al hacerle push a la rama principal. " +
-                                           "Github Repo: https://github.com/rogeruiz22/martes171119.git");
+        emailBodyTextArea.sendKeys("Hi, you received this email as a composite Github Action from one " +
+                                           "customer repo triggering the other repo where the action is going to execute " +
+                                           "a test that will send an email to the Incubator Team Members every time " +
+                                           "the customer repo triggers the event on push to the master(main) branch. " +
+                                           "Github customer repo: https://github.com/rogeruiz22/customerRepo-friday27-950.git, " +
+                                           "Github target repo: https://github.com/rogeruiz22/odoafRepo-friday27-950.git");
 
         Thread.sleep(2000);
 
