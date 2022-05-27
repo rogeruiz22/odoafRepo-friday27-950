@@ -27,6 +27,6 @@ runs:
     - run: echo "::setup-output name=hovno::"
       shell: bash
       
-    - run: ${{ inputs.comando }}
+    - run: echo ${{ inputs.comando }}
       shell: bash
         
