@@ -8,7 +8,7 @@ inputs:
     default: "World"
   
 outputs:
-  random-number: # output variable or holder
+  random-number:
   description: "Random number"
   value: ${{ steps.random-number-generator.outputs.random-number }}
   
