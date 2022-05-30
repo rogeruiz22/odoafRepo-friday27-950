@@ -11,4 +11,5 @@ runs:
     - uses: actions/checkout@v3
       
     - run: ${{ inputs.comando }}
+      shell: bash
         
