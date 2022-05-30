@@ -65,7 +65,9 @@ public class AppTest {
 
         Thread.sleep(2000);
         
-        Assert.assertTrue(true);
+        String pageTitle = driver.getTitle();
+        
+        Assert.assertEquals(pageTitle, "Home | Salesforce");
 
         driver.quit();
     }
