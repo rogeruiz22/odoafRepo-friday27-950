@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AppTest {
@@ -64,7 +65,7 @@ public class AppTest {
 
         Thread.sleep(2000);
         
-        Assert.assertEquals(true);
+        Assert.assertTrue(true);
 
         driver.quit();
     }
