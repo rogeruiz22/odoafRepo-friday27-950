@@ -67,7 +67,7 @@ public class AppTest {
         
         String pageTitle = driver.getTitle();
         
-        Assert.assertEquals(pageTitle, "Home | Salesforce");
+        Assert.assertEquals(pageTitle, "Recently Viewed | Contacts | Salesforce");
 
         driver.quit();
     }
