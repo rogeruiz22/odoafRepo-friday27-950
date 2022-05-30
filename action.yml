@@ -1,11 +1,11 @@
-name: "Hola Mundo"
-description: "Greet someone"
+name: 'Hola Mundo'
+description: 'Greet someone'
 inputs:
   comando:
-    description: "lo que sea"
+    description: 'lo que sea'
     required: true
 runs:
-  using: “composite”
+  using: 'composite'
   
   steps:
     - uses: actions/checkout@v3
