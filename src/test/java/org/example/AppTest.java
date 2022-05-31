@@ -69,7 +69,7 @@ public class AppTest {
         
 //        Assert.assertEquals(pageTitle, "Recently Viewed | Contacts | Salesforce");
 
-        Assert.assertTrue(true);
+//        Assert.assertTrue(true);
 
         driver.quit();
     }
