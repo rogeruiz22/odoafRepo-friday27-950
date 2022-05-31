@@ -35,7 +35,7 @@ public class AppTest {
         WebElement subjectField = driver.findElement(By.xpath("//input[@placeholder='Enter Subject...']"));
         subjectField.sendKeys("Now should work");
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         WebElement emailBodyIframe = driver.findElement(By.xpath("//div[@class='content iframe-parent']//iframe"));
         driver.switchTo().frame(emailBodyIframe);
