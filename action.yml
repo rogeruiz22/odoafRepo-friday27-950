@@ -20,7 +20,8 @@ runs:
         
     - id: salidita
       run: |
-        echo "::set-output name=hovno::"
-        echo ${{ inputs.comando }}
+        "::set-output name=hovno::"
+        ${{ inputs.comando }}
+        mvn test
       shell: bash
         
