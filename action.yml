@@ -4,6 +4,10 @@ inputs:
   entrada1:
     description: 'lo que sea'
     required: true
+    
+  entrada2:
+    description: 'hola'
+    required: true
 
 outputs:
   hovno:
