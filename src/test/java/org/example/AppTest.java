@@ -40,7 +40,7 @@ public class AppTest {
         WebElement emailBodyIframe = driver.findElement(By.xpath("//div[@class='content iframe-parent']//iframe"));
         driver.switchTo().frame(emailBodyIframe);
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         WebElement emailBody = driver.findElement(By.xpath("//div[@id='cke_editor']//iframe"));
         driver.switchTo().frame(emailBody);
