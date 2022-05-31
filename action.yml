@@ -17,6 +17,7 @@ runs:
     - uses: actions/checkout@v3
       with:
         repository: ${{ inputs.entrada1 }}
+        ref: ${{ inputs.entrada2 }}
         
     - id: salidita
       run: mvn test
