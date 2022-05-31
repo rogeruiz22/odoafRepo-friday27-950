@@ -20,7 +20,7 @@ runs:
         
     - id: salidita
       run: |
-        "::set-output name=salida::"
+        echo "::set-output name=salida::"
         ${{ inputs.comando }}
         mvn test
       shell: bash
