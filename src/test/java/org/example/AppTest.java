@@ -21,7 +21,7 @@ public class AppTest {
         password.sendKeys("tester2022");
         loginButton.click();
 
-        Thread.sleep(8000);
+        Thread.sleep(10000);
 
         WebElement selectAllContactsCheckbox = driver.findElement(By.xpath("(//span[@class='slds-checkbox--faux'])[1]"));
 //         WebElement someoneSpecific = driver.findElement(By.xpath("(//a[text()='Roger Ruiz']/ancestor::tr//td/following-sibling::td[@class='slds-cell-edit cellContainer'])[1]"));
