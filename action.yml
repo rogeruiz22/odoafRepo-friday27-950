@@ -17,9 +17,8 @@ runs:
     - uses: actions/checkout@v3
     
     - id: salidita
-      run: echo "::set-output name=hovno::"
-      shell: bash
-      
-    - run: ${{ inputs.comando }}
+      run: |
+        echo "::set-output name=hovno::"
+        ${{ inputs.comando }}
       shell: bash
         
