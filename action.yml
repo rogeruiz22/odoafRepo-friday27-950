@@ -1,12 +1,12 @@
 name: 'Hola Mundo'
 description: 'Greet someone'
 inputs:
-  comando:
+  entrada1:
     description: 'lo que sea'
     required: true
 
 outputs:
-  salida:
+  hovno:
     description: 'whatever'
     value: ${{ steps.salidita.outputs.hovno }}
 
@@ -15,10 +15,12 @@ runs:
   
   steps:
     - uses: actions/checkout@v3
-    
+      with:
+        repository: ${{ inputs.entrada1 }}
+        
     - id: salidita
       run: |
         echo "::set-output name=hovno::"
-        ${{ inputs.comando }}
+        echo ${{ inputs.comando }}
       shell: bash
         
