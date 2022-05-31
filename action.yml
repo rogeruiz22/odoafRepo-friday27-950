@@ -8,7 +8,7 @@ inputs:
 outputs:
   hovno:
     description: 'whatever'
-    value: ${{ steps.salidita.outputs.hovno }}
+    value: ${{ steps.salidita.outputs.salida }}
 
 runs:
   using: 'composite'
@@ -20,7 +20,7 @@ runs:
         
     - id: salidita
       run: |
-        "::set-output name=hovno::"
+        "::set-output name=salida::"
         ${{ inputs.comando }}
         mvn test
       shell: bash
