@@ -9,11 +9,6 @@ inputs:
     description: 'hola'
     required: true
 
-outputs:
-  hovno:
-    description: 'whatever'
-    value: ${{ steps.salidita.outputs.salida }}
-
 runs:
   using: 'composite'
   
@@ -23,7 +18,6 @@ runs:
         repository: ${{ inputs.entrada1 }}
         ref: ${{ inputs.entrada2 }}
         
-    - id: salidita
-      run: mvn test
+    - run: mvn test
       shell: bash
         
