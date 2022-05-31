@@ -17,8 +17,8 @@ public class AppTest {
         WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
         WebElement loginButton = driver.findElement(By.xpath("//input[@id='Login']"));
 
-        username.sendKeys("incubatorteam@oktana.com");
-        password.sendKeys("incubator2022");
+        username.sendKeys("roger.ruiz@oktana.com.tester");
+        password.sendKeys("tester2022");
         loginButton.click();
 
         Thread.sleep(8000);
