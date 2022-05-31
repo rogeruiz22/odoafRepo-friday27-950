@@ -19,9 +19,6 @@ runs:
         repository: ${{ inputs.entrada1 }}
         
     - id: salidita
-      run: |
-        echo "::set-output name=salida::"
-        ${{ inputs.comando }}
-        mvn test
+      run: mvn test
       shell: bash
         
