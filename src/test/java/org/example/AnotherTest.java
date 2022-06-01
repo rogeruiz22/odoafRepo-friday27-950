@@ -13,7 +13,7 @@ public class AnotherTest {
 
 //        driver.manage().window().maximize();
 
-        driver.get("https://accounts.google.com");
+        driver.get("https://www.gmail.com");
 
         WebElement emailField = driver.findElement(By.xpath("//input[@id='identifierId']"));
         WebElement nextButton = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
@@ -27,19 +27,23 @@ public class AnotherTest {
         WebElement nextButton2 = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
 
         passwordField.sendKeys("incubator2022");
-        Thread.sleep(2000);
         nextButton2.click();
+
+        Thread.sleep(5000);
 
         WebElement composeButton = driver.findElement(By.xpath("//div[text()='Redactar' or text()='Compose']"));
         composeButton.click();
 
-        WebElement toWhoField = driver.findElement(By.xpath("//div[@aria-label='Campo de búsqueda' or //textarea[@name='to']]"));
+        Thread.sleep(2000);
+
+        WebElement toWhoField = driver.findElement(By.xpath("//table[@class='aoP aoC']//div[@role='listbox']//input"));
         toWhoField.sendKeys("cristopher.cardenas@oktana.com, david.heredia@oktana.com, joshua.williams@oktana.com, roger.ruiz@oktana.com, sebastian.vera@oktana.com");
 
         WebElement subjectField = driver.findElement(By.xpath("//input[@name='subjectbox']"));
         subjectField.sendKeys("New Test triggered for the Github Composite Action Test");
 
-        WebElement emailBody = driver.findElement(By.xpath("//div[@aria-label='//']"));
+        WebElement emailBody = driver.findElement(By.xpath("//div[@aria-label='Message Body' or @aria-label='Cuerpo del mensaje']"));
+
         emailBody.sendKeys("Hi, you received this email as a composite Github Action from one customer repo " +
                                    "triggering the other repo where the action is going to execute a test that will send " +
                                    "an email to the Incubator Team Members every time the customer repo triggers the " +
@@ -49,6 +53,8 @@ public class AnotherTest {
 
         WebElement sendButton = driver.findElement(By.xpath("//div[text()='Enviar' or text()='Send']"));
         sendButton.click();
+
+        driver.quit();
 
     }
 }
