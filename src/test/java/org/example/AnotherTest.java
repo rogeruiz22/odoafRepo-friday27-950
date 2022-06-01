@@ -21,7 +21,7 @@ public class AnotherTest {
         emailField.sendKeys("incubatorteam2022@gmail.com");
         nextButton.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
         WebElement passwordField = driver.findElement(By.xpath("//input[@name='password']"));
         WebElement nextButton2 = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
