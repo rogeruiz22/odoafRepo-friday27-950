@@ -29,7 +29,7 @@ public class AnotherTest {
         passwordField.sendKeys("incubator2022");
         nextButton2.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(10000);
 
         WebElement composeButton = driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']"));
         composeButton.click();
