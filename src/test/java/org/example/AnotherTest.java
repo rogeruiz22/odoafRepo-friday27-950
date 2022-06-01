@@ -31,7 +31,7 @@ public class AnotherTest {
 
         Thread.sleep(3000);
 
-        WebElement composeButton = driver.findElement(By.xpath("//div[text()='Compose']"));
+        WebElement composeButton = driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']"));
         composeButton.click();
 
         Thread.sleep(2000);
