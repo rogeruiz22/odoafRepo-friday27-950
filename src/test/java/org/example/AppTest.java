@@ -17,11 +17,11 @@ public class AppTest {
         WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
         WebElement loginButton = driver.findElement(By.xpath("//input[@id='Login']"));
 
-        username.sendKeys("roger.ruiz@oktana.com.tester");
-        password.sendKeys("tester2022");
+        username.sendKeys("incubatorteam@oktana.com");
+        password.sendKeys("incubator2022");
         loginButton.click();
 
-        Thread.sleep(20000);
+        Thread.sleep(8000);
 
         WebElement selectAllContactsCheckbox = driver.findElement(By.xpath("(//span[@class='slds-checkbox--faux'])[1]"));
 //         WebElement someoneSpecific = driver.findElement(By.xpath("(//a[text()='Roger Ruiz']/ancestor::tr//td/following-sibling::td[@class='slds-cell-edit cellContainer'])[1]"));
@@ -69,7 +69,7 @@ public class AppTest {
         
 //        Assert.assertEquals(pageTitle, "Recently Viewed | Contacts | Salesforce");
 
-//        Assert.assertTrue(true);
+        Assert.assertTrue(true);
 
         driver.quit();
     }
