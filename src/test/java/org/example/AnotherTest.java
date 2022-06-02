@@ -12,10 +12,7 @@ import org.testng.annotations.Test;
 public class AnotherTest {
     @Test
     public void secondTest() throws Exception {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-
-        ChromeDriver driver = new ChromeDriver(options);
+        ChromeDriver driver = new ChromeDriver();
 
 //        driver.manage().window().maximize();
 
@@ -32,9 +29,9 @@ public class AnotherTest {
         Thread.sleep(5000);
 
         WebElement passwordField = driver.findElement(By.xpath("//input[@name='password']"));
-        WebElement nextButton2 = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
-
         passwordField.sendKeys("incubator2022");
+
+        WebElement nextButton2 = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
         nextButton2.click();
 
         Thread.sleep(8000);
