@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class AnotherTest {
@@ -31,8 +33,7 @@ public class AnotherTest {
 
         Thread.sleep(30000);
 
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Redactar' or text()='Compose']")));
-//         WebElement composeButton = driver.findElement(By.xpath("//div[text()='Compose' or text()='Redactar']"));
+         WebElement composeButton = driver.findElement(By.xpath("//div[text()='Redactar' or text()='Compose']"));
         composeButton.click();
 
         Thread.sleep(2000);
