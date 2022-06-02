@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -37,8 +38,15 @@ public class AnotherTest {
 
         Thread.sleep(8000);
 
-        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose') or contains(text(), 'Redactar')]"));
-        composeButton.click();
+        String cssPath = "div.privacy-warning.permisive div.close a";
+        ((JavascriptExecutor)driver).executeScript("document.querySelector(arguments[0],':before').click();", cssPath);
+
+//        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose') or contains(text(), 'Redactar')]"));
+//        composeButton.click();
+
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.cssSelector("div.T-I"))).build().perform();
+        action.click().perform();
 
         Thread.sleep(5000);
 
