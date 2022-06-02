@@ -42,7 +42,8 @@ public class AnotherTest {
 //        composeButton.click();
 
         Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.cssSelector("div.T-I::before"))).build().perform();
+//        action.moveToElement(driver.findElement(By.cssSelector("div.T-I::before"))).build().perform();
+        action.moveToElement(driver.findElement(By.cssSelector("div:contains('Redactar')"))).build().perform();
         action.click().perform();
 
         Thread.sleep(5000);
