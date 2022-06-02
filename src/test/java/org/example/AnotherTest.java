@@ -15,7 +15,7 @@ public class AnotherTest {
     public void secondTest() throws Exception {
         ChromeDriver driver = new ChromeDriver();
 
-//        driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
         driver.get("https://www.gmail.com");
         
