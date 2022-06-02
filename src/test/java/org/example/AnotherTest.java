@@ -38,8 +38,9 @@ public class AnotherTest {
         Thread.sleep(8000);
 
         WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose')] | //div[contains(text(), 'Redactar')]"));
+        composeButton.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
         WebElement toWhoField = driver.findElement(By.xpath("//table[@class='aoP aoC']//div[@role='listbox']//input"));
         toWhoField.sendKeys("cristopher.cardenas@oktana.com, david.heredia@oktana.com, joshua.williams@oktana.com, roger.ruiz@oktana.com, sebastian.vera@oktana.com");
