@@ -20,6 +20,8 @@ public class AnotherTest {
 //        driver.manage().window().maximize();
 
         driver.get("https://www.gmail.com");
+        
+        Thread.sleep(5000);
 
         WebElement emailField = driver.findElement(By.xpath("//input[@id='identifierId']"));
         WebElement nextButton = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
