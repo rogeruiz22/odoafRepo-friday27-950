@@ -37,16 +37,8 @@ public class AnotherTest {
         nextButton2.click();
 
         Thread.sleep(8000);
-
-//        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose') or contains(text(), 'Redactar')]"));
-//        composeButton.click();
-
-//         Actions action = new Actions(driver);
-//        action.moveToElement(driver.findElement(By.cssSelector("div.T-I::before"))).build().perform();
-//         action.moveToElement(driver.findElement(By.cssSelector("div:contains('Redactar')"))).build().perform();
-//         action.click().perform();
         
-        WebElement composeButton = driver.findElement(By.cssSelector("div:contains('Redactar')"));
+        WebElement composeButton = driver.findElement(By.xpath("//div[@class='T-I T-I-KE L3']"));
         composeButton.click();
 
         Thread.sleep(5000);
