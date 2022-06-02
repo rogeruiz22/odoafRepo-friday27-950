@@ -38,14 +38,11 @@ public class AnotherTest {
 
         Thread.sleep(8000);
 
-        String cssPath = "div.privacy-warning.permisive div.close a";
-        ((JavascriptExecutor)driver).executeScript("document.querySelector(arguments[0],':before').click();", cssPath);
-
 //        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose') or contains(text(), 'Redactar')]"));
 //        composeButton.click();
 
         Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.cssSelector("div.T-I"))).build().perform();
+        action.moveToElement(driver.findElement(By.cssSelector("div.T-I::before"))).build().perform();
         action.click().perform();
 
         Thread.sleep(5000);
