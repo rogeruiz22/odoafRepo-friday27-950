@@ -1,6 +1,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,10 +35,9 @@ public class AnotherTest {
         WebElement nextButton2 = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
         nextButton2.click();
 
-        Thread.sleep(120000);
+        Thread.sleep(8000);
 
-        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose')] | //div[contains(text(), 'Redactar')]//div//div//div"));
-        composeButton.click();
+        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose')] | //div[contains(text(), 'Redactar')]"));
 
         Thread.sleep(2000);
 
