@@ -34,9 +34,9 @@ public class AnotherTest {
         WebElement nextButton2 = driver.findElement(By.xpath("//span[text()='Siguiente' or text()='Next']"));
         nextButton2.click();
 
-        Thread.sleep(8000);
+        Thread.sleep(10000);
 
-        WebElement composeButton = driver.findElement(By.xpath("//div[text()='Redactar' or text()='Compose']"));
+        WebElement composeButton = driver.findElement(By.xpath("//div[contains(text(), 'Compose')] | //div[contains(text(), 'Redactar')]"));
         composeButton.click();
 
         Thread.sleep(2000);
