@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -11,7 +12,10 @@ import org.testng.annotations.Test;
 public class AnotherTest {
     @Test
     public void secondTest() throws Exception {
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+
+        ChromeDriver driver = new ChromeDriver(options);
 
 //        driver.manage().window().maximize();
 
@@ -31,9 +35,9 @@ public class AnotherTest {
         passwordField.sendKeys("incubator2022");
         nextButton2.click();
 
-        Thread.sleep(30000);
+        Thread.sleep(8000);
 
-         WebElement composeButton = driver.findElement(By.xpath("//div[text()='Redactar' or text()='Compose']"));
+        WebElement composeButton = driver.findElement(By.xpath("//div[text()='Redactar' or text()='Compose']"));
         composeButton.click();
 
         Thread.sleep(2000);
