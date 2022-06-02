@@ -55,6 +55,8 @@ public class AnotherTest {
         WebElement sendButton = driver.findElement(By.xpath("//div[text()='Enviar' or text()='Send']"));
         sendButton.click();
 
+        Thread.sleep(10000);
+
         driver.quit();
 
     }
