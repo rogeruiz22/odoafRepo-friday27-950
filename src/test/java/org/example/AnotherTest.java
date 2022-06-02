@@ -31,7 +31,8 @@ public class AnotherTest {
 
         Thread.sleep(30000);
 
-        WebElement composeButton = driver.findElement(By.xpath("//div[text()='Compose' or text()='Redactar']"));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Redactar' or text()='Compose']")));
+//         WebElement composeButton = driver.findElement(By.xpath("//div[text()='Compose' or text()='Redactar']"));
         composeButton.click();
 
         Thread.sleep(2000);
