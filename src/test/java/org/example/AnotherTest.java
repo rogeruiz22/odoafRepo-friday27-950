@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class AnotherTest {
-//    @Test
+    @Test
     public void secondTest() throws Exception {
         ChromeDriver driver = new ChromeDriver();
 
