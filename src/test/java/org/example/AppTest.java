@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AppTest {
-//    @Test
+    @Test
     public void firstTest() throws Exception {
         WebDriver driver = new ChromeDriver();
         driver.get("https://teamorg2-dev-ed.lightning.force.com/lightning/o/Contact/list?filterName=Recent");
